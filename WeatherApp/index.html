@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Weather Forecast</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="formBox">
+                <input
+                    type="text"
+                    class="inputLocation"
+                    placeholder="Enter a location" />
+                <button class="searchButton"><img src="resources/images/search.png" alt="Search" id="search"></button>
+            </div>
+            <div class="weather">
+                <img src="./resources/images/snow.png" alt="WeatherStyle"  class="weatherImage"/>
+                <h1><span class="temperature">22</span>°C</h1>
+                <h2 class="city">Bengaluru</h2>
+                <div class="weather-parameter">
+                    <div class="col">
+                        <img src="resources/images/humidity.png" alt="img1" />
+                        <div >
+                            <p class="humidity">53%</p>
+                            <p>Humidity</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <img src="resources/images/wind.png" alt="img2" />
+                        <div >
+                            <p class="wind-speed"> <span id="wind-speed"> 5.66</span> km/h</p>
+                            <p>Wind Speed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="app.js">
+
+        </script>
+    </body>
+</html>
