@@ -1,7 +1,7 @@
 const searchButton = document.querySelector('.searchButton');
 const inputBox = document.querySelector('.inputLocation');
 
-const APP_SECRET = "5b5f29ceccbcfc4389f967852a0ccd45"
+const APP_SECRET = ""
 
 function generateRequestURL(query) {
     const baseUrl = `https://api.openweathermap.org/data/2.5/weather?q=${query}&appid=${APP_SECRET}&units=metric`;
