@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: purple;
+    color: whitesmoke;
+    height: 37px;
+    padding: 7px 44px;
+}
+nav ul {
+    list-style-type: none;
+}
+
+.displayContainer {
+    background-color: yellow;
+    margin-top: 25vh;
+    display: flex;
+    justify-content: center;
+}
+
+.gameContainer {
+    
+}
+
+
+.resultContainer{
+
+}
