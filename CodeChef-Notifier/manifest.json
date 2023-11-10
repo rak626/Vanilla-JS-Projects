@@ -1,0 +1,16 @@
+{
+    "name": "CodeChef Verifier",
+    "description": "Automatically checks the verdict of CodeChef submissions and notifies the user through desktop notifications.",
+    "version": "1.0",
+    "manifest_version": 3,
+    "permissions": ["activeTab", "storage", "notifications"],
+    "content_scripts": [
+        {
+            "matches": ["https://www.codechef.com/api/ide/submit"],
+            "js": ["contentScript.js"]
+        }
+    ],
+    "background": {
+        "service_worker": "backgroundScript.js"
+    }
+}

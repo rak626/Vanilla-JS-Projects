@@ -1,3 +1,4 @@
+'use strict'
 // dom elements
 const boxes = document.querySelectorAll('.box'),
     messageBox = document.querySelector('#message'),
@@ -22,6 +23,7 @@ function addColorToMemory() {
 
 const animateNextDiv = (index) => {
     if (index >= colors.length) {
+        displayMessage('Guess the number.....', 'white')
         return
     }
     const box = boxes[colors[index]]
@@ -43,7 +45,6 @@ function visualize() {
 function handleClickEvent(event) {
     clickCount++
     const inputColor = event.target.id.toLowerCase()
-    console.log(inputColor)
     switch (inputColor) {
         case 'yellow':
             inputColors.push(3)
@@ -80,8 +81,8 @@ function takingInput() {
     })
 }
 
-function displayMessage(msg, label) {
-    messageBox.style.color = label ? 'red' : 'rgb(72, 255, 0)'
+function displayMessage(msg, color) {
+    messageBox.style.color = color
     messageBox.innerHTML = msg
 }
 
@@ -113,10 +114,10 @@ function validateInput() {
     if (JSON.stringify(colors) === JSON.stringify(inputColors)) {
         updateScore()
         displayScores()
-        displayMessage('Correct Guess, Score Updated.', false)
+        displayMessage('Correct Guess, Score Updated.', 'rgb(72, 255, 0)')
         runSteps()
     } else {
-        displayMessage('Sorry you lost. Click Start to play again', true)
+        displayMessage('Sorry you lost. Click Start to play again', 'red')
         resetScore()
     }
 }
